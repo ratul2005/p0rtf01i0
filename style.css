@@ -1123,3 +1123,36 @@ nav {
         font-size: 1.25rem;
     }
 }
+
+
+// for shild purpose 
+
+
+* {
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+
+input, textarea {
+    user-select: text !important;
+    cursor: auto !important;
+}
+
+
+.shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50; 
+    background: rgba(0, 0, 0, 0); 
+}
+
+
+img {
+    pointer-events: none; 
+    -webkit-user-drag: none; 
+}
