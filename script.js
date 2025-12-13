@@ -33,3 +33,27 @@ const cursorDot = document.querySelector('[data-cursor-dot]'); const cursorOutli
         document.ondragstart = function() { 
             return false; 
         };
+
+
+
+
+window.addEventListener('load', function() {
+    const canvas = document.getElementById('protectedAvatar');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        
+        
+        
+        img.src = "avatar_real_fixed.png"; 
+        
+        img.onload = function() {
+            
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            
+            ctx.drawImage(img, 0, 0);
+        };
+    }
+});
